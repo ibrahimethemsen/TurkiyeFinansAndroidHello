@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="cd_app_icon">Uygulama İkonu</string>
+    <!--OnBoarding-->
+    <string name="onboarding_description">Kitaplarınızın konularını kayıt altına alabileceğiniz\ntürlerine göre filtreleme yapabileceğiniz küçük bir kütaphanedir.</string>
+    <string name="onboarding_btn">Uygulamaya Göz Atalım</string>
+
+</resources>

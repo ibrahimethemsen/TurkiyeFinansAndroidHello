@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Padding-->
+    <dimen name="padding_24">24dp</dimen>
+    <dimen name="padding_20">20dp</dimen>
+    <dimen name="padding_16">16dp</dimen>
+    <dimen name="padding_8">8dp</dimen>
+    <dimen name="padding_4">4dp</dimen>
+
+    <!--OnBoarding-->
+    <dimen name="onboarding_title_size">28sp</dimen>
+    <dimen name="onboarding_description_size">20sp</dimen>
+    <dimen name="onboarding_btn_text_size">16sp</dimen>
+
+</resources>

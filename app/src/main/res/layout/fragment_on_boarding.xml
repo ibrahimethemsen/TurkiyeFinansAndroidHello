@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".onboarding.OnBoardingFragment">
+
+
+    <ImageView
+        android:id="@+id/gradient"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/onboarding_gradient"
+        app:layout_constraintBottom_toTopOf="@+id/onboarding_mid_v"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cd_app_icon"
+        android:src="@drawable/books"
+        app:layout_constraintBottom_toBottomOf="@+id/gradient"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="@id/onboarding_end_h"
+        app:layout_constraintStart_toStartOf="@+id/onboarding_start_h"
+        app:layout_constraintTop_toTopOf="@+id/onboarding_top_v" />
+
+    <TextView
+        android:id="@+id/onboarding_app_title_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:textColor="@color/app_blue"
+        android:text="@string/app_name"
+        android:textSize="@dimen/onboarding_title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/onboarding_mid_v" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/onboarding_top_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/onboarding_mid_v"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/onboarding_start_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.40" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/onboarding_end_h"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.60" />
+
+    <Button
+        android:id="@+id/onboarding_skip_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onboarding_btn"
+        android:textAllCaps="false"
+        android:textSize="@dimen/onboarding_btn_text_size"
+        android:drawableEnd="@drawable/ic_arrow"
+        android:layout_marginHorizontal="@dimen/padding_16"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onboarding_app_description_tv"
+        app:layout_constraintVertical_bias="0.495" />
+
+    <TextView
+        android:id="@+id/onboarding_app_description_tv"
+        android:layout_width="0dp"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/padding_8"
+        android:text="@string/onboarding_description"
+        android:textSize="@dimen/onboarding_description_size"
+        android:textStyle="italic"
+        android:ellipsize="end"
+        app:layout_constraintBottom_toTopOf="@+id/onboarding_skip_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/onboarding_app_title_tv" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
