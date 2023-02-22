@@ -12,4 +12,10 @@
     <dimen name="onboarding_description_size">20sp</dimen>
     <dimen name="onboarding_btn_text_size">16sp</dimen>
 
+    <!--EditText-->
+    <dimen name="min_width_et">380dp</dimen>
+    <dimen name="max_width_et">488dp</dimen>
+
+    <!--Login-->
+    <dimen name="login_app_title_size">20sp</dimen>
 </resources>

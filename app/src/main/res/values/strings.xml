@@ -2,9 +2,18 @@
     <string name="app_name" translatable="false">Books Board</string>
 
     <string name="cd_app_icon">App Icon</string>
+    <string name="cd_gradient">Color Gradient</string>
 
     <!--OnBoarding-->
     <string name="onboarding_description">It is a small library where\nyou can record the topics of your books and filter by genre.</string>
     <string name="onboarding_btn">Lets Have a Look at the Application</string>
+
+    <!--Login-->
+    <string name="email" translatable="false">E-mail</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="remember_account">Leave Session Open</string>
+    <string name="forgot_password">I forgot my password</string>
+    <string name="register">Register</string>
 
 </resources>

@@ -11,6 +11,7 @@
         android:id="@+id/gradient"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/cd_gradient"
         android:background="@drawable/onboarding_gradient"
         app:layout_constraintBottom_toTopOf="@+id/onboarding_mid_v"
         app:layout_constraintEnd_toEndOf="parent"
