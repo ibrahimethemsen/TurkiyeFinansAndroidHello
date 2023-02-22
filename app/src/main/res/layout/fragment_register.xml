@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_16"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".register.RegisterFragment">
+
+    <ImageView
+        android:id="@+id/register_app_icon"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:contentDescription="@string/cd_app_icon"
+        android:background="@drawable/books"
+        app:layout_constraintBottom_toBottomOf="@+id/register_app_name"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toStartOf="@+id/register_app_name"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@id/register_start_horizontal"
+        app:layout_constraintStart_toStartOf="@id/register_start_horizontal"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/register_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textSize="@dimen/login_app_title_size"
+        app:layout_constraintEnd_toStartOf="@+id/register_end_horizontal"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/register_app_icon"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_eposta_til"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/email"
+        android:minWidth="@dimen/min_width_et"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:maxWidth="@dimen/max_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:startIconDrawable="@drawable/ic_email"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/register_vertical">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_eposta_et"
+            android:layout_width="match_parent"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_password_til"
+        android:layout_width="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/ic_lock"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        app:endIconMode="password_toggle"
+        android:minWidth="@dimen/min_width_et"
+        android:maxWidth="@dimen/max_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_eposta_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_security_password_til"
+        android:layout_width="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:startIconDrawable="@drawable/ic_lock"
+        android:layout_height="wrap_content"
+        android:hint="@string/security_password"
+        app:endIconMode="password_toggle"
+        android:minWidth="@dimen/min_width_et"
+        android:maxWidth="@dimen/max_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/register_password_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_security_password_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/register_nick_name_til"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="@string/nick_name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:minWidth="@dimen/min_width_et"
+        android:maxWidth="@dimen/max_width_et"
+        app:startIconDrawable="@drawable/ic_person"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/register_security_password_til">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:inputType="textEmailAddress"
+            android:layout_height="wrap_content" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/register_start_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.3" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/register_end_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/register_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <TextView
+        android:id="@+id/register_gender_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8"
+        android:text="@string/gender"
+        app:layout_constraintStart_toStartOf="@+id/register_nick_name_til"
+        app:layout_constraintTop_toBottomOf="@+id/register_nick_name_til" />
+
+    <RadioGroup
+        android:id="@+id/register_radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_8"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@+id/register_gender_tv"
+        app:layout_constraintTop_toBottomOf="@+id/register_gender_tv">
+
+        <RadioButton
+            android:id="@+id/register_lady"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lady" />
+
+        <RadioButton
+            android:id="@+id/register_gentleman"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/padding_16"
+            android:text="@string/gentleman" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/register_btn"
+        android:layout_width="wrap_content"
+        android:textAllCaps="false"
+        android:paddingHorizontal="@dimen/padding_24"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="@dimen/padding_16"
+        app:layout_constraintTop_toBottomOf="@+id/register_radio_group" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

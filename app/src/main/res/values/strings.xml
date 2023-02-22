@@ -16,4 +16,14 @@
     <string name="forgot_password">I forgot my password</string>
     <string name="register">Register</string>
 
+    <!--Register-->
+    <string name="gender">Gender</string>
+    <string name="lady">Lady</string>
+    <string name="gentleman">Gentleman</string>
+    <string name="nick_name">Nick Name</string>
+    <string name="security_password">Security Password</string>
+
+    <!--Forgot Password-->
+    <string name="forgot_password_helper">Your security password is the password you entered when registering.</string>
+    <string name="reset_password_tv">Reset Password</string>
 </resources>

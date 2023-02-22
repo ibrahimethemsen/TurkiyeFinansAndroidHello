@@ -11,5 +11,12 @@
     <string name="remember_account">Oturumu açık bırak</string>
     <string name="forgot_password">Şifremi unuttum</string>
     <string name="register">Kayıt Ol</string>
+    <string name="gender">Cinsiyet</string>
+    <string name="lady">Hanımefendi</string>
+    <string name="gentleman">Beyfendi</string>
+    <string name="nick_name">Takma Ad</string>
+    <string name="security_password">Güvenlik Şifresi</string>
+    <string name="forgot_password_helper">Güvenlik şifreniz kayıt olurken girdiğiniz şifredir</string>
+    <string name="reset_password_tv">Şifreyi Sıfırla</string>
 
 </resources>
