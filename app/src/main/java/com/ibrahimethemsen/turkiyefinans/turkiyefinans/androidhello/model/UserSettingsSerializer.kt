@@ -22,7 +22,6 @@ class UserSettingsSerializer(
                 string = decryptedBytes.decodeToString()
             )
         }catch (e : SerializationException){
-            e.printStackTrace()
             defaultValue
         }
     }

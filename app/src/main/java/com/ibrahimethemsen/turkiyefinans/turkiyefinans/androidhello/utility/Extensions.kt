@@ -4,8 +4,7 @@ import android.content.Context
 import androidx.datastore.dataStore
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.model.UserSettingsSerializer
 
-
 val Context.dataStore by dataStore(
-    fileName = "user-settings.json",
+    fileName = "user.json",
     serializer = UserSettingsSerializer(CryptoManager())
 )

@@ -18,6 +18,7 @@ import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.model.UserSe
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.dataStore
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlin.coroutines.CoroutineContext
 
 class RegisterFragment : Fragment() {
     private var _binding : FragmentRegisterBinding? = null
@@ -39,21 +40,7 @@ class RegisterFragment : Fragment() {
         binding.apply {
             registerBtn.setOnClickListener {
                 if (checkEditText()){
-                    val deviceId = Settings.Secure.getString(requireContext().contentResolver,Settings.Secure.ANDROID_ID)
-                    lifecycleScope.launch(Dispatchers.IO){
-                        requireContext().dataStore.updateData {
-                            UserSettings(
-                                deviceId,
-                                binding.registerEpostaEt.text.toString(),
-                                binding.registerPasswordEt.text.toString(),
-                                binding.registerSecurityPasswordEt.text.toString(),
-                                binding.registerNickNameEt.text.toString(),
-                                gender
-                            )
-                        }
-                    }
-                    val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
-                    findNavController().navigate(action)
+                   writeDataStore()
                 }else{
                     Toast.makeText(requireContext(),"Boş alan bırakmayınız",Toast.LENGTH_LONG).show()
                 }
@@ -62,6 +49,24 @@ class RegisterFragment : Fragment() {
         radioButtonListener(binding.registerLady,R.string.lady)
         radioButtonListener(binding.registerGentleman,R.string.gentleman)
     }
+    private fun writeDataStore(coroutineContext : CoroutineContext = Dispatchers.IO){
+        val deviceId = Settings.Secure.getString(requireContext().contentResolver,Settings.Secure.ANDROID_ID)
+        //TODO Repository-Clean Arch ile update işlemi taşınabilir
+        lifecycleScope.launch(coroutineContext){
+            requireContext().dataStore.updateData {
+                UserSettings(
+                    deviceId,
+                    binding.registerEpostaEt.text.toString(),
+                    binding.registerPasswordEt.text.toString(),
+                    binding.registerSecurityPasswordEt.text.toString(),
+                    binding.registerNickNameEt.text.toString(),
+                    gender
+                )
+            }
+        }
+        toLoginFragment()
+    }
+
     private fun radioButtonListener(radioButton : RadioButton,@StringRes resourceString : Int){
         radioButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked){
@@ -77,8 +82,11 @@ class RegisterFragment : Fragment() {
                 registerPasswordEt.text.toString(),
                 registerSecurityPasswordEt.text.toString(),
                 registerNickNameEt.text.toString(),
-                gender
-            )
+            ) && gender != null
         }
+    }
+    private fun toLoginFragment(){
+        val action = RegisterFragmentDirections.actionRegisterFragmentToLoginFragment()
+        findNavController().navigate(action)
     }
 }
