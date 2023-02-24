@@ -108,6 +108,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/register_security_password_til">
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/register_nick_name_et"
             android:layout_width="match_parent"
             android:inputType="textEmailAddress"
             android:layout_height="wrap_content" />
@@ -169,13 +170,13 @@
     <Button
         android:id="@+id/register_btn"
         android:layout_width="wrap_content"
-        android:textAllCaps="false"
-        android:paddingHorizontal="@dimen/padding_24"
         android:layout_height="wrap_content"
-        android:text="@string/register"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/padding_16"
+        android:paddingHorizontal="@dimen/padding_24"
+        android:text="@string/register"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@+id/register_end_horizontal"
+        app:layout_constraintStart_toStartOf="@+id/register_start_horizontal"
         app:layout_constraintTop_toBottomOf="@+id/register_radio_group" />
 
 

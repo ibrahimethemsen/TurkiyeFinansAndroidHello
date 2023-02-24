@@ -11,9 +11,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentLoginBinding
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.dataStore
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 
 class LoginFragment : Fragment() {
     private var _binding : FragmentLoginBinding? = null
@@ -30,6 +35,12 @@ class LoginFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         clickableText(R.string.register,::toRegisterFragment,binding.loginToRegisterTv)
         clickableText(R.string.forgot_password,::toForgotPasswordFragment,binding.loginForgotPassword)
+        binding.loginBtn.setOnClickListener {
+            lifecycleScope.launch(Dispatchers.IO) {
+                val data = requireContext().dataStore.data.first()
+                println("data $data")
+            }
+        }
     }
 
     private fun clickableText(
@@ -55,11 +66,11 @@ class LoginFragment : Fragment() {
     }
 
     private fun toForgotPasswordFragment(){
-        val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
+        val action = LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
         findNavController().navigate(action)
     }
     private fun toRegisterFragment(){
-        val action = LoginFragmentDirections.actionLoginFragmentToForgotPasswordFragment()
+        val action = LoginFragmentDirections.actionLoginFragmentToRegisterFragment()
         findNavController().navigate(action)
     }
 }
