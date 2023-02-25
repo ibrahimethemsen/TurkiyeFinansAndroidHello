@@ -9,4 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="app_blue">#1B779E</color>
+
+    <color name="blue_moon">#FF25316D</color>
+    <color name="blue_soft">#FF5F9DF7</color>
+    <color name="orange_sun">#FFFD841F</color>
+    <color name="yellow_soft">#FFFDFDBD</color>
+    <color name="gray">#FF8C8C8C</color>
 </resources>

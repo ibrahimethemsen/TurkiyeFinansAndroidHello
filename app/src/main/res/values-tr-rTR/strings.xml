@@ -18,5 +18,29 @@
     <string name="security_password">Güvenlik Şifresi</string>
     <string name="forgot_password_helper">Güvenlik şifreniz kayıt olurken girdiğiniz şifredir</string>
     <string name="reset_password_tv">Şifreyi Sıfırla</string>
+    <string name="library">Kütüphane</string>
+    <string name="favorite">Favori</string>
+    <string name="page_icon">Sayfa Sayısı</string>
+    <string name="favorite_icon">Favori İkon</string>
+    <string name="book_cover">Kitap Kapağı</string>
+
+    <!--Mock Data-->
+    <string name="book">Siyaset, devlet işlerini düzenleme ve yürütme sanatı olarak bilinse de bu sanatın zemininde nice taktikler, nice oyunlar yatıyordu… Yeri geldiğinde bir ikna sanatı, yeri geldiğinde ise keskin bir kılıçtı. Nice kanlar aktı, nice canlar yandı. Sözün kısası, Selçuklular devrinde incelikli bir sanattı siyaset. İşte bu kitap da, bu sanatı devlet adamlarına öğretmek, onlara devleti yönetme becerisi kazandırmak amacıyla yazılmıştı</string>
+    <string name="book_1">Koca bir kavmin binlerce kilometreyi üç asır içinde geçtiğini düşünün… Bu, dünyayı değiştirmez de ne yapar? İşte Türkler dünyayı böyle değiştirdi. Bu sebeple, bizim hayalî bir tarih ve kahramanlar üretmeye değil, yalnızca doğruyu öğrenmeye ihtiyacımız var</string>
+    <string name="book_2">Cesur olun. Kendinizi rahat hissettiğiniz alanın dışında pencereler açın. Farklı dünyalarla ancak böyle tanışırsınız. Ben hep yerimde dursaydım, dünyamı değiştirecek insanları aramasaydım, bugün tanıdığınız ben olmazdım. Bir insanın bittiği an, miskinliğe esir olduğu andır. İnsan, konforundan vazgeçmeyi göze almalıdır. Kendi dünyasını yerinden kendisi oynatmalıdır.</string>
+    <string name="book_3">Psikoloji profesörü Richard Wiseman kişisel gelişim endüstrisi tarafından dayatılan günümüzün modern mitlerinin kirli çamaşırlarını ortaya seriyor ve insanların aylar değil, dakikalar içinde amaç ve tutkularında başarılı olmalarına yardım edecek yeni bir yaklaşım sunuyor. Wiseman ruhsal durumdan belleğe, iknadan sürüncemede bırakmaya ve dirençli olmaktan ilişkilere kadar pek çok konuda hızlı değişimin bu yeni bilimini destekleyen araştırmaların ana hatlarını çiziyor ve bu hızlı ve ilginç tekniklerin gündelik hayatla nasıl uyumlu hale getirilebileceğini tanımlıyor. </string>
+    <string name="book_4">Teknoloji, Eğlence ve Dizayn sözcüklerinin baş harflerinden adını alan TED konferanslarının gördüğü ilgi bütün dünyada artarak sürüyor. “Paylaşmaya değer fikirler” sloganıyla anılan, insanları bu denli etkileyen 18 dakikalık TED konuşmaları internette 4 milyardan fazla izlendi.</string>
+    <string name="book_5">!Başarılı insanlar hakkında anlatılan bir hikâye vardır; onların zeki ve hırslı oldukları söylenir. Outliers’te Malcolm Gladwell başarının gerçek hikâyesinin bundan çok farklı olduğunu ve bazı insanların neden başarılı olduğunu anlamak için, bunların çevrelerine daha dikkatli bakmamız gerektiğini iddia ediyor. Mesela aileleri, doğum yerleri ve hatta doğum tarihleri… Başarının hikâyesi başta göründüğünden daha karmaşık ve çok daha ilgi çekici… </string>
+
+
+    <!--Mock Data sub title-->
+    <string name="sub_title">Siyasetname veya Siyeru l-mülk, Nizamülmülk tarafından kaleme alınmış siyaset konulu eser.</string>
+    <string name="sub_title_1">Koca bir kavmin binlerce kilometreyi üç asır içinde geçtiğini düşünün</string>
+    <string name="sub_title_2">Cesur olun. Kendinizi rahat hissettiğiniz alanın dışında pencereler açın</string>
+    <string name="sub_title_3">Psikoloji profesörü Richard Wiseman kişisel gelişim endüstrisi tarafından dayatılan günümüzün modern mitlerinin kirli çamaşırlarını ortaya seriyor ve insanların aylar değil</string>
+    <string name="sub_title_4">Teknoloji, Eğlence ve Dizayn sözcüklerinin baş harflerinden adını alan TED konferanslarının gördüğü ilgi bütün dünyada artarak sürüyor. “Paylaşmaya değer fikirler” sloganıyla anılan</string>
+    <string name="sub_title_5">!Başarılı insanlar hakkında anlatılan bir hikâye vardır; onların zeki ve hırslı oldukları söylenir</string>
+
+    <string name="pages_size">$s Sayfa</string>
 
 </resources>

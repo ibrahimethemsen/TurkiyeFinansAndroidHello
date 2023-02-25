@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/adapter_book_iv"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/book_cover"
+            android:src="@drawable/book"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/adapter_book_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="SiyasetName"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/adapter_book_sub_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:ellipsize="end"
+            android:maxLines="3"
+            app:layout_constraintBottom_toTopOf="@+id/adapterRating"
+            app:layout_constraintEnd_toStartOf="@+id/adapter_favorite"
+            app:layout_constraintStart_toStartOf="@+id/adapter_book_title_tv"
+            app:layout_constraintTop_toBottomOf="@+id/adapter_book_title_tv"
+            tools:text="@string/sub_title_4" />
+
+        <RatingBar
+            android:id="@+id/adapterRating"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:rating="3"
+            app:layout_constraintBottom_toTopOf="@+id/library_page_iv"
+            android:layout_marginBottom="@dimen/padding_4"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            />
+
+        <TextView
+            android:id="@+id/adapter_pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/padding_4"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/library_page_iv"
+            app:layout_constraintStart_toEndOf="@+id/library_page_iv"
+            app:layout_constraintTop_toTopOf="@+id/library_page_iv"
+            tools:text="288 Pages" />
+
+        <ImageView
+            android:id="@+id/library_page_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/padding_8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/adapterRating"
+            app:srcCompat="@drawable/ic_page"
+            android:contentDescription="@string/page_icon" />
+
+        <ImageButton
+            android:id="@+id/adapter_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/favorite_icon"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@android:color/transparent"
+            android:layout_margin="@dimen/padding_8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/ic_bookmark" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

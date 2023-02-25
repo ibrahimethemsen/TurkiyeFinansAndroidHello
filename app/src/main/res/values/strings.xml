@@ -26,4 +26,27 @@
     <!--Forgot Password-->
     <string name="forgot_password_helper">Your security password is the password you entered when registering.</string>
     <string name="reset_password_tv">Reset Password</string>
+    <string name="library">Library</string>
+    <string name="favorite">Favorite</string>
+    <string name="page_icon">Number Of Pages</string>
+    <string name="favorite_icon">Favorite İcon</string>
+    <string name="book_cover">Book Cover</string>
+
+    <!--Mock Data Description-->
+    <string name="book">Although politics was known as the art of arranging and conducting state affairs, many tactics and games lay on the ground of this art… It was an art of persuasion when appropriate, and a sharp sword when appropriate. A lot of blood has been shed, a lot of lives have been burned. In short, politics was a sophisticated art in the Seljuk era. This book was written in order to teach this art to statesmen and to give them the ability to manage the state.</string>
+    <string name="book_1">Imagine that a great tribe has traveled thousands of kilometers in three centuries… What does this do if it doesn t change the world? This is how the Turks changed the world. For this reason, we do not need to produce an imaginary history and heroes, but only to learn the truth.</string>
+    <string name="book_2">Be brave. Open windows outside the area where you feel comfortable. This is how you meet different worlds. I wouldn\'t be who you know today if I hadn\'t always stood my ground, looking for the people who would change my world. The moment a person is finished is when he is a prisoner of sluggishness. One should be willing to give up their comfort. He must move his own world.</string>
+    <string name="book_3">Psychology professor Richard Wiseman exposes the dirty laundry of today\'s modern myths imposed by the self-help industry and offers a new approach to helping people achieve their goals and passions in minutes, not months. From mood to memory, from persuasion to procrastination, and from resilience to relationships, Wiseman outlines the research that supports this new science of rapid change and describes how these fast and interesting techniques can be brought into harmony with everyday life.</string>
+    <string name="book_4">The interest in TED conferences, named after the initials of the words Technology, Entertainment and Design, continues to increase all over the world. Known with the slogan "ideas worth sharing", his 18-minute TED talks that had such an impact on people were viewed more than 4 billion times on the Internet.</string>
+    <string name="book_5">!There is a story told about successful people; They are said to be intelligent and ambitious. In Outliers, Malcolm Gladwell argues that the true story of success is very different from that, and that to understand why some people succeed, we need to look more carefully around them. For example, their families, places of birth and even dates of birth… The story of success is more complex and much more interesting than it seems at first…</string>
+
+    <!--Mock Data Sub Title-->
+    <string name="sub_title">Siyaru l-mulk, or Siyeru l-mulk, is a work on politics written by Nizamülmülk.</string>
+    <string name="sub_title_1">Imagine that a great tribe traveled thousands of kilometers in three centuries.</string>
+    <string name="sub_title_2">Be brave. Open windows outside of your comfort zone</string>
+    <string name="sub_title_3">Psychology professor Richard Wiseman reveals the dirty laundry of today\'s modern myths imposed by the self-help industry</string>
+    <string name="sub_title_4">The interest in TED conferences, named after the initials of the words Technology, Entertainment and Design, continues to increase all over the world. Known as "Ideas worth sharing"</string>
+    <string name="sub_title_5">!There is a story told about successful people; they are said to be intelligent and ambitious</string>
+
+    <string name="pages_size">%d Pages</string>
 </resources>
