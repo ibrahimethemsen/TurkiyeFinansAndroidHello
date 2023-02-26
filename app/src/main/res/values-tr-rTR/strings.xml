@@ -41,6 +41,10 @@
     <string name="sub_title_4">Teknoloji, Eğlence ve Dizayn sözcüklerinin baş harflerinden adını alan TED konferanslarının gördüğü ilgi bütün dünyada artarak sürüyor. “Paylaşmaya değer fikirler” sloganıyla anılan</string>
     <string name="sub_title_5">!Başarılı insanlar hakkında anlatılan bir hikâye vardır; onların zeki ve hırslı oldukları söylenir</string>
 
-    <string name="pages_size">$s Sayfa</string>
+    <string name="pages_size">%d Sayfa</string>
 
+    <!--Category Filter-->
+    <string name="category_history">Tarhi</string>
+    <string name="category_sociology">Sosyoloji</string>
+    <string name="category_self_improvement">Kişisel Gelişim</string>
 </resources>

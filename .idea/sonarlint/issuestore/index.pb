@@ -19,3 +19,7 @@ napp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/
 kapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/register/RegisterFragment.kt,d\2\d2fb069bfb3770b42b0b40e5ca6e03d015770575
 œ
 lapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/register/RegisterViewModel.kt,e\3\e3b1e0d226b6c0728a82048683df9098da14d5ef
+
+^app/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/MainActivity.kt,c\c\ccdfbc5f1f45fa435f6fa7fb3eebd580777c295c
+—
+gapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/utility/SharedManager.kt,2\7\27c1f493e5ed8ee0fddf9dfc47324f6bc8802127

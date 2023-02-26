@@ -49,4 +49,9 @@
     <string name="sub_title_5">!There is a story told about successful people; they are said to be intelligent and ambitious</string>
 
     <string name="pages_size">%d Pages</string>
+    
+    <!--Category Filter-->
+    <string name="category_history">History</string>
+    <string name="category_sociology">Sociology</string>
+    <string name="category_self_improvement">Self Improvement</string>
 </resources>

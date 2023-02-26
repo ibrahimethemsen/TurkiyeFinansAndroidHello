@@ -1,15 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".library.LibraryFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/library_rv"
-        android:layout_width="match_parent"
-        tools:listitem="@layout/adapter_library_item"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-        android:layout_height="match_parent" />
-</FrameLayout>
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/library_category_group"
+        tools:listitem="@layout/adapter_library_item" />
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/library_category_group"
+        android:layout_width="0dp"
+        android:layout_marginHorizontal="@dimen/padding_4"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/library_category_history"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_history" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/library_category_sociology"
+            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_sociology" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/library_category_self"
+            android:layout_width="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_self_improvement" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+</androidx.constraintlayout.widget.ConstraintLayout>

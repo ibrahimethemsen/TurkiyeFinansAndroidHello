@@ -67,7 +67,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/library_page_iv"
             app:layout_constraintStart_toEndOf="@+id/library_page_iv"
             app:layout_constraintTop_toTopOf="@+id/library_page_iv"
-            tools:text="288 Pages" />
+            tools:text="@string/pages_size" />
 
         <ImageView
             android:id="@+id/library_page_iv"
@@ -82,11 +82,12 @@
         <ImageButton
             android:id="@+id/adapter_favorite"
             android:layout_width="wrap_content"
+            android:minWidth="@dimen/min_icon_size"
+            android:minHeight="@dimen/min_icon_size"
             android:layout_height="wrap_content"
             android:contentDescription="@string/favorite_icon"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@android:color/transparent"
-            android:layout_margin="@dimen/padding_8"
             app:layout_constraintEnd_toEndOf="parent"
             app:srcCompat="@drawable/ic_bookmark" />
 

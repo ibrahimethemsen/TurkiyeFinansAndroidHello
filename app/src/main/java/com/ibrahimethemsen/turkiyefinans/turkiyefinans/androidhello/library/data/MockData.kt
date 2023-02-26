@@ -1,10 +1,8 @@
-package com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility
+package com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data
 
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.Book
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.Category
 
-val booksList = mutableListOf<Book>(
+val booksList = mutableListOf(
     Book(
         0,
         "SiyasetName",

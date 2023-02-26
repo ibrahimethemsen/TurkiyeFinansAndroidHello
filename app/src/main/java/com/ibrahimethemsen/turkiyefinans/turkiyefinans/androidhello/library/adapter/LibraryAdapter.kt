@@ -32,7 +32,7 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryAdapter.LibraryViewHolder>(){
                 adapterBookTitleTv.text = book.name
                 adapterBookSubTitleTv.text = this.root.context.getString(book.subtitle)
                 adapterRating.rating = book.rating.toFloat()
-                adapterPages.text = book.pages.toString()
+                adapterPages.text = this.root.context.getString(R.string.pages_size,book.pages)
                 if (book.isFavorite){
                     adapterFavorite.setImageResource(R.drawable.ic_bookmark_favorite)
                 }else{

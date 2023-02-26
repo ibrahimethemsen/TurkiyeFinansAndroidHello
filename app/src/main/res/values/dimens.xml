@@ -18,4 +18,5 @@
 
     <!--Login-->
     <dimen name="login_app_title_size">20sp</dimen>
+    <dimen name="min_icon_size">48dp</dimen>
 </resources>

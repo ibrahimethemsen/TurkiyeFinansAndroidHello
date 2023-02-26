@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentFavoriteBinding
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.adapter.LibraryAdapter
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.favoriteList
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.favoriteList
 
 class FavoriteFragment : Fragment() {
     private var _binding : FragmentFavoriteBinding? = null
@@ -27,7 +27,7 @@ class FavoriteFragment : Fragment() {
         setAdapter()
     }
     private fun setAdapter(){
-        libraryAdapter.updateList(favoriteList)
+        libraryAdapter.updateList(favoriteList.distinct())
         binding.favoriteRv.adapter = libraryAdapter
     }
 }
