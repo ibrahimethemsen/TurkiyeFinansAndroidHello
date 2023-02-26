@@ -37,6 +37,12 @@ class HomeFragment : Fragment() {
             binding.bottomNavigationView,
             navController
         )
+        navController.addOnDestinationChangedListener{_,destination,_ ->
+            when(destination.id){
+                R.id.bookDetailFragment -> binding.bottomNavigationView.visibility = View.GONE
+                else -> {binding.bottomNavigationView.visibility = View.VISIBLE}
+            }
+        }
     }
 
     private fun listener() {

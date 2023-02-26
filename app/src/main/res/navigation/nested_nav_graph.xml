@@ -9,11 +9,41 @@
         android:id="@+id/libraryFragment"
         android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.LibraryFragment"
         android:label="fragment_library"
-        tools:layout="@layout/fragment_library" />
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.favorite.FavoriteFragment"
         android:label="fragment_favorite"
-        tools:layout="@layout/fragment_favorite" />
+        tools:layout="@layout/fragment_favorite" >
+        <action
+            android:id="@+id/action_favoriteFragment_to_bookDetailFragment"
+            app:destination="@id/bookDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/bookDetailFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.detail.BookDetailFragment"
+        android:label="fragment_book_detail"
+        tools:layout="@layout/fragment_book_detail" >
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <action
+            android:id="@+id/action_bookDetailFragment_to_libraryFragment"
+            app:destination="@id/libraryFragment"
+            app:popUpTo="@id/bookDetailFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_bookDetailFragment_to_favoriteFragment"
+            app:destination="@id/favoriteFragment"
+            app:popUpTo="@id/bookDetailFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="start"
+            app:argType="string" />
+    </fragment>
 
 </navigation>

@@ -16,6 +16,11 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryAdapter.LibraryViewHolder>(){
         notifyDataSetChanged()
     }
 
+    private var detailClickBook : ((Int) -> Unit)? = null
+    fun setDetailClickBook(detailClickBook : (Int) -> Unit){
+        this.detailClickBook = detailClickBook
+    }
+
     private var clickBook : ((Int) -> Unit)? = null
 
     fun setClickBook(clickBook : (Int) -> Unit){
@@ -25,7 +30,8 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryAdapter.LibraryViewHolder>(){
     class LibraryViewHolder(private val binding : AdapterLibraryItemBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(
             book : Book,
-            clickBook: ((Int) -> Unit)?
+            clickBook: ((Int) -> Unit)?,
+            detailClickBook : ((Int) -> Unit)?
         ){
             binding.apply {
                 adapterBookIv.setImageResource(book.cover)
@@ -41,6 +47,9 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryAdapter.LibraryViewHolder>(){
                 adapterFavorite.setOnClickListener {
                     clickBook?.invoke(book.id)
                 }
+                root.setOnClickListener {
+                    detailClickBook?.invoke(book.id)
+                }
             }
         }
     }
@@ -53,6 +62,6 @@ class LibraryAdapter : RecyclerView.Adapter<LibraryAdapter.LibraryViewHolder>(){
     override fun getItemCount(): Int = books.size
 
     override fun onBindViewHolder(holder: LibraryViewHolder, position: Int) {
-        holder.bind(books[position],clickBook)
+        holder.bind(books[position],clickBook,detailClickBook)
     }
 }

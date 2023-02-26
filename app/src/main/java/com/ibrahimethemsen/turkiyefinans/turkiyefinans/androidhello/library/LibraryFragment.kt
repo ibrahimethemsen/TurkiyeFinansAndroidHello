@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentLibraryBinding
@@ -12,6 +13,7 @@ import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.adap
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.Category
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.booksList
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.favoriteList
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.Constants.START_LIBRARY
 
 class LibraryFragment : Fragment() {
     private var _binding: FragmentLibraryBinding? = null
@@ -65,6 +67,7 @@ class LibraryFragment : Fragment() {
 
     private fun setAdapter() {
         binding.libraryRv.adapter = libraryAdapter
+        libraryAdapter.setDetailClickBook(::toDetailFragment)
     }
 
     private fun clickBook(id: Int) {
@@ -77,6 +80,14 @@ class LibraryFragment : Fragment() {
             favoriteList.add(booksList[id])
             setRecyclerList()
         }
+    }
+
+
+
+    private fun toDetailFragment(bookId : Int){
+        val action = LibraryFragmentDirections.actionLibraryFragmentToBookDetailFragment(bookId,
+            START_LIBRARY)
+        findNavController().navigate(action)
     }
 
     private fun setRecyclerList() {

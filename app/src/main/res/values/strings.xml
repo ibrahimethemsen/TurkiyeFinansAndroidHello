@@ -29,7 +29,7 @@
     <string name="library">Library</string>
     <string name="favorite">Favorite</string>
     <string name="page_icon">Number Of Pages</string>
-    <string name="favorite_icon">Favorite İcon</string>
+    <string name="cd_favorite_icon">Favorite İcon</string>
     <string name="book_cover">Book Cover</string>
 
     <!--Mock Data Description-->
@@ -49,9 +49,15 @@
     <string name="sub_title_5">!There is a story told about successful people; they are said to be intelligent and ambitious</string>
 
     <string name="pages_size">%d Pages</string>
-    
+
     <!--Category Filter-->
     <string name="category_history">History</string>
     <string name="category_sociology">Sociology</string>
     <string name="category_self_improvement">Self Improvement</string>
+    <string name="cd_back_btn">Back Button</string>
+    <string name="detail_background">Detail Background</string>
+    <string name="cd_book_cover">Book Cover</string>
+    <string name="book_detail_rating">%d\nRating</string>
+    <string name="book_detail_language">%s\nLanguage</string>
+    <string name="book_detail_page">%d\nPages</string>
 </resources>

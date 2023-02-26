@@ -85,7 +85,7 @@
             android:minWidth="@dimen/min_icon_size"
             android:minHeight="@dimen/min_icon_size"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/favorite_icon"
+            android:contentDescription="@string/cd_favorite_icon"
             app:layout_constraintTop_toTopOf="parent"
             android:background="@android:color/transparent"
             app:layout_constraintEnd_toEndOf="parent"

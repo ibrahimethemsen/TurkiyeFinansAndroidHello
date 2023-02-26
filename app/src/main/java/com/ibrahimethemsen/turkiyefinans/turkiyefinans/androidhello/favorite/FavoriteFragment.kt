@@ -5,9 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentFavoriteBinding
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.adapter.LibraryAdapter
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.favoriteList
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.Constants
 
 class FavoriteFragment : Fragment() {
     private var _binding : FragmentFavoriteBinding? = null
@@ -28,6 +30,13 @@ class FavoriteFragment : Fragment() {
     }
     private fun setAdapter(){
         libraryAdapter.updateList(favoriteList.distinct())
+        libraryAdapter.setDetailClickBook(::toDetailFragment)
         binding.favoriteRv.adapter = libraryAdapter
+    }
+    private fun toDetailFragment(bookId : Int){
+        val action = FavoriteFragmentDirections.actionFavoriteFragmentToBookDetailFragment(bookId,
+            Constants.START_FAVORITE
+        )
+        findNavController().navigate(action)
     }
 }

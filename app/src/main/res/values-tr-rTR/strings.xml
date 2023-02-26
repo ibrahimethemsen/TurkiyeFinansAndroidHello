@@ -21,7 +21,7 @@
     <string name="library">Kütüphane</string>
     <string name="favorite">Favori</string>
     <string name="page_icon">Sayfa Sayısı</string>
-    <string name="favorite_icon">Favori İkon</string>
+    <string name="cd_favorite_icon">Favori İkon</string>
     <string name="book_cover">Kitap Kapağı</string>
 
     <!--Mock Data-->
@@ -47,4 +47,15 @@
     <string name="category_history">Tarhi</string>
     <string name="category_sociology">Sosyoloji</string>
     <string name="category_self_improvement">Kişisel Gelişim</string>
+
+
+    <string name="cd_back_btn">Geri Butonu</string>
+    <string name="detail_background">Detay Arkaplanı</string>
+    <string name="cd_book_cover">Kitap Kapağı</string>
+
+
+    <string name="book_detail_rating">%d\nDeğerlendirme</string>
+    <string name="book_detail_language">%s\nDil</string>
+    <string name="book_detail_page">%d\nSayfa</string>
+
 </resources>
