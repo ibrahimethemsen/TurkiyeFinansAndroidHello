@@ -1,8 +1,12 @@
 <resources>
     <string name="app_name" translatable="false">Books Board</string>
-
+    <!--Content Description-->
     <string name="cd_app_icon">App Icon</string>
     <string name="cd_gradient">Color Gradient</string>
+    <string name="cd_favorite_icon">Favorite İcon</string>
+    <string name="cd_book_cover">Book Cover</string>
+    <string name="cd_back_btn">Back Button</string>
+    <string name="cd_book_title_detail_background">Title Background</string>
 
     <!--OnBoarding-->
     <string name="onboarding_description">It is a small library where\nyou can record the topics of your books and filter by genre.</string>
@@ -26,10 +30,10 @@
     <!--Forgot Password-->
     <string name="forgot_password_helper">Your security password is the password you entered when registering.</string>
     <string name="reset_password_tv">Reset Password</string>
+
     <string name="library">Library</string>
     <string name="favorite">Favorite</string>
     <string name="page_icon">Number Of Pages</string>
-    <string name="cd_favorite_icon">Favorite İcon</string>
     <string name="book_cover">Book Cover</string>
 
     <!--Mock Data Description-->
@@ -48,16 +52,21 @@
     <string name="sub_title_4">The interest in TED conferences, named after the initials of the words Technology, Entertainment and Design, continues to increase all over the world. Known as "Ideas worth sharing"</string>
     <string name="sub_title_5">!There is a story told about successful people; they are said to be intelligent and ambitious</string>
 
+    <!--Adapter item-->
     <string name="pages_size">%d Pages</string>
 
     <!--Category Filter-->
     <string name="category_history">History</string>
     <string name="category_sociology">Sociology</string>
     <string name="category_self_improvement">Self Improvement</string>
-    <string name="cd_back_btn">Back Button</string>
+
+    <!--Book Detail-->
     <string name="detail_background">Detail Background</string>
-    <string name="cd_book_cover">Book Cover</string>
     <string name="book_detail_rating">%d\nRating</string>
     <string name="book_detail_language">%s\nLanguage</string>
     <string name="book_detail_page">%d\nPages</string>
+
+
+    <!--Favorite Fragment-->
+    <string name="empty_list">Visit the Library to add a favorite book.</string>
 </resources>

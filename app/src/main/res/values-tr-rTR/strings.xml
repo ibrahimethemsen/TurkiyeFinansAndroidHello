@@ -1,27 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Content Description-->
     <string name="cd_app_icon">Uygulama İkonu</string>
+    <string name="cd_gradient">Renk Gradyanı</string>
+    <string name="cd_favorite_icon">Favori İkon</string>
+    <string name="cd_book_cover">Kitap Kapağı</string>
+    <string name="cd_back_btn">Geri Butonu</string>
+    <string name="cd_book_title_detail_background">Başlıkların Arkaplanı</string>
+
     <!--OnBoarding-->
     <string name="onboarding_description">Kitaplarınızın konularını kayıt altına alabileceğiniz\ntürlerine göre filtreleme yapabileceğiniz küçük bir kütaphanedir.</string>
     <string name="onboarding_btn">Uygulamaya Göz Atalım</string>
-    <string name="cd_gradient">Renk Gradyanı</string>
     <!--Login-->
     <string name="password">Şifre</string>
     <string name="login">Giriş Yap</string>
     <string name="remember_account">Oturumu açık bırak</string>
     <string name="forgot_password">Şifremi unuttum</string>
     <string name="register">Kayıt Ol</string>
+
+    <!--Register-->
     <string name="gender">Cinsiyet</string>
     <string name="lady">Hanımefendi</string>
     <string name="gentleman">Beyfendi</string>
     <string name="nick_name">Takma Ad</string>
     <string name="security_password">Güvenlik Şifresi</string>
+
+    <!--Forgot Password-->
     <string name="forgot_password_helper">Güvenlik şifreniz kayıt olurken girdiğiniz şifredir</string>
     <string name="reset_password_tv">Şifreyi Sıfırla</string>
+
     <string name="library">Kütüphane</string>
     <string name="favorite">Favori</string>
     <string name="page_icon">Sayfa Sayısı</string>
-    <string name="cd_favorite_icon">Favori İkon</string>
     <string name="book_cover">Kitap Kapağı</string>
 
     <!--Mock Data-->
@@ -41,6 +51,7 @@
     <string name="sub_title_4">Teknoloji, Eğlence ve Dizayn sözcüklerinin baş harflerinden adını alan TED konferanslarının gördüğü ilgi bütün dünyada artarak sürüyor. “Paylaşmaya değer fikirler” sloganıyla anılan</string>
     <string name="sub_title_5">!Başarılı insanlar hakkında anlatılan bir hikâye vardır; onların zeki ve hırslı oldukları söylenir</string>
 
+    <!--Adapter item-->
     <string name="pages_size">%d Sayfa</string>
 
     <!--Category Filter-->
@@ -48,14 +59,13 @@
     <string name="category_sociology">Sosyoloji</string>
     <string name="category_self_improvement">Kişisel Gelişim</string>
 
-
-    <string name="cd_back_btn">Geri Butonu</string>
+    <!--Book Detail-->
     <string name="detail_background">Detay Arkaplanı</string>
-    <string name="cd_book_cover">Kitap Kapağı</string>
-
-
     <string name="book_detail_rating">%d\nDeğerlendirme</string>
     <string name="book_detail_language">%s\nDil</string>
     <string name="book_detail_page">%d\nSayfa</string>
+
+    <!--Favorite Fragment-->
+    <string name="empty_list">Favori kitap eklemek için Kütüphane\'yi ziyater edin.</string>
 
 </resources>

@@ -60,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/padding_8"
         android:textColor="@color/black"
-        android:textSize="@dimen/login_app_title_size"
+        android:textSize="@dimen/title_size"
         app:layout_constraintBottom_toTopOf="@id/book_detail_sub_title_tv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,6 +108,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginHorizontal="@dimen/padding_24"
+        android:contentDescription="@string/cd_book_title_detail_background"
         android:background="@drawable/detail_title_background"
         app:layout_constraintBottom_toTopOf="@+id/book_detail_title_h"
         app:layout_constraintEnd_toEndOf="parent"
@@ -128,6 +129,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/padding_8"
+        android:textColor="@color/black"
         android:gravity="center"
         app:layout_constraintBottom_toBottomOf="@+id/book_detail_title_background"
         app:layout_constraintEnd_toStartOf="@+id/book_detail_rating_divider"
@@ -154,6 +156,7 @@
         android:layout_margin="@dimen/padding_8"
         android:layout_height="0dp"
         android:gravity="center"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="@+id/book_detail_title_background"
         app:layout_constraintEnd_toStartOf="@+id/book_detail_language_divider"
         app:layout_constraintHorizontal_bias="0.476"
@@ -179,11 +182,12 @@
         android:layout_height="0dp"
         android:layout_margin="@dimen/padding_8"
         android:gravity="center"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/book_detail_title_h"
         app:layout_constraintEnd_toEndOf="@+id/book_detail_title_background"
         app:layout_constraintStart_toEndOf="@+id/book_detail_language_divider"
         app:layout_constraintTop_toBottomOf="@+id/book_detail_gradient"
-        tools:text="@string/pages_size" />
+        tools:text="@string/book_detail_page" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/book_detail_start_v"

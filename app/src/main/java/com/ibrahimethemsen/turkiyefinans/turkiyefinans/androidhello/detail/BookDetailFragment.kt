@@ -10,6 +10,7 @@ import androidx.navigation.fragment.navArgs
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentBookDetailBinding
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.booksList
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.favoriteList
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.Constants.START_FAVORITE
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.Constants.START_LIBRARY
 
@@ -34,6 +35,20 @@ class BookDetailFragment : Fragment() {
     private fun listener(){
         binding.bookDetailBackBtn.setOnClickListener {
             setClickBackBtn()
+        }
+        binding.bookDetailFavoriteBtn.setOnClickListener {
+            clickFavorite(args.id)
+        }
+    }
+    private fun clickFavorite(id: Int) {
+        if (booksList[id].isFavorite) {
+            favoriteList.remove(booksList[id])
+            booksList[id] = booksList[id].copy(isFavorite = false)
+            setFavoriteIcon(booksList[id].isFavorite)
+        } else {
+            booksList[id] = booksList[id].copy(isFavorite = true)
+            favoriteList.add(booksList[id])
+            setFavoriteIcon(booksList[id].isFavorite)
         }
     }
 
@@ -60,11 +75,15 @@ class BookDetailFragment : Fragment() {
             bookDetailPageTv.text = getString(R.string.book_detail_page,book.pages)
             bookDetailDescriptionTextTv.text = getString(book.description)
             bookDetailCover.setImageResource(book.cover)
-            if (book.isFavorite){
-                bookDetailFavoriteBtn.setImageResource(R.drawable.ic_bookmark_favorite)
-            }else{
-                bookDetailFavoriteBtn.setImageResource(R.drawable.ic_bookmark)
-            }
+            setFavoriteIcon(book.isFavorite)
+        }
+    }
+
+    private fun setFavoriteIcon(isFavorite : Boolean){
+        if (isFavorite){
+            binding.bookDetailFavoriteBtn.setImageResource(R.drawable.ic_bookmark_favorite)
+        }else{
+            binding.bookDetailFavoriteBtn.setImageResource(R.drawable.ic_bookmark)
         }
     }
 }

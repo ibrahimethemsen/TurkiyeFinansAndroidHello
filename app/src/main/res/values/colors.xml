@@ -15,4 +15,5 @@
     <color name="orange_sun">#FFFD841F</color>
     <color name="yellow_soft">#FFFDFDBD</color>
     <color name="gray">#FF8C8C8C</color>
+    <color name="light_gray">#C5C3C3</color>
 </resources>

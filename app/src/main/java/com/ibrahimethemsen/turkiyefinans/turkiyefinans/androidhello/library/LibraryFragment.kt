@@ -82,8 +82,6 @@ class LibraryFragment : Fragment() {
         }
     }
 
-
-
     private fun toDetailFragment(bookId : Int){
         val action = LibraryFragmentDirections.actionLibraryFragmentToBookDetailFragment(bookId,
             START_LIBRARY)

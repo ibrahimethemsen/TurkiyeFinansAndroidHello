@@ -25,3 +25,7 @@ wapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/
 gapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/library/data/MockData.kt,9\3\9332513e0ca33fa24eadc3e4204c629132d517a5
 “
 capp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/library/data/Book.kt,7\5\75407209b5011650eb7d961f8eeabc7abcd1efaf
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
+“
+capp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/utility/Constants.kt,a\8\a8aaaa4d2acbc032f5ce9d69d012e0d170479696

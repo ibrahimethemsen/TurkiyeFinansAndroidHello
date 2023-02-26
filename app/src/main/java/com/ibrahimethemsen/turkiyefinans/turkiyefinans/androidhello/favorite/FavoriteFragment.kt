@@ -29,7 +29,14 @@ class FavoriteFragment : Fragment() {
         setAdapter()
     }
     private fun setAdapter(){
-        libraryAdapter.updateList(favoriteList.distinct())
+        if (favoriteList.distinct().isEmpty()){
+            binding.favoriteRv.visibility = View.GONE
+            binding.favoriteEmptyList.visibility = View.VISIBLE
+        }else{
+            binding.favoriteRv.visibility = View.VISIBLE
+            binding.favoriteEmptyList.visibility = View.GONE
+            libraryAdapter.updateList(favoriteList.distinct())
+        }
         libraryAdapter.setDetailClickBook(::toDetailFragment)
         binding.favoriteRv.adapter = libraryAdapter
     }

@@ -17,6 +17,8 @@
     <dimen name="max_width_et">488dp</dimen>
 
     <!--Login-->
-    <dimen name="login_app_title_size">20sp</dimen>
+    <dimen name="title_size">20sp</dimen>
     <dimen name="min_icon_size">48dp</dimen>
+
+
 </resources>
