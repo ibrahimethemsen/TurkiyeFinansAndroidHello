@@ -11,6 +11,7 @@
     <string name="cd_book_cover">Book Cover</string>
     <string name="cd_back_btn">Back Button</string>
     <string name="cd_book_title_detail_background">Title Background</string>
+    <string name="cd_add_book_btn">Add Book Button</string>
 
     <!--OnBoarding-->
     <string name="onboarding_description">It is a small library where\nyou can record the topics of your books and filter by genre.</string>
@@ -76,4 +77,5 @@
 
     <!--Search Hint-->
     <string name="search_hint">Book Name</string>
+
 </resources>

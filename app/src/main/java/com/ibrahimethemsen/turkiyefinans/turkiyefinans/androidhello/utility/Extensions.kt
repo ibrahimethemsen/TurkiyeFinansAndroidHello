@@ -4,7 +4,7 @@ import android.content.Context
 import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.datastore.dataStore
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.model.UserSettingsSerializer
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.domain.model.datastore.UserSettingsSerializer
 
 val Context.dataStore by dataStore(
     fileName = "user.json",

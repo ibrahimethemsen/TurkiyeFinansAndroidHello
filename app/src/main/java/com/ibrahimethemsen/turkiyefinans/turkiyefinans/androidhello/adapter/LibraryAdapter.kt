@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.AdapterLibraryItemBinding
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.Book
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.data.Book
 
 class LibraryAdapter : RecyclerView.Adapter<LibraryAdapter.LibraryViewHolder>(){
     private val books = mutableListOf<Book>()

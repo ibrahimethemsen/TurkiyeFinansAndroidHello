@@ -72,5 +72,6 @@
     <!--Favorite Fragment-->
     <string name="empty_list">Favori kitap eklemek için Kütüphane\'yi ziyater edin.</string>
     <string name="search_hint">Kitap Adı</string>
+    <string name="cd_add_book_btn">Kitap Ekleme Butonu</string>
 
 </resources>

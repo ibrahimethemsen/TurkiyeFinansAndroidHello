@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="@dimen/padding_16"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".register.RegisterFragment">
+    tools:context=".presentation.register.RegisterFragment">
 
     <ImageView
         android:id="@+id/register_app_icon"

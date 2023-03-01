@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/libraryFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.LibraryFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.LibraryFragment"
         android:label="fragment_library"
         tools:layout="@layout/fragment_library" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.favorite.FavoriteFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.favorite.FavoriteFragment"
         android:label="fragment_favorite"
         tools:layout="@layout/fragment_favorite" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/bookDetailFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.detail.BookDetailFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.detail.BookDetailFragment"
         android:label="fragment_book_detail"
         tools:layout="@layout/fragment_book_detail" >
         <argument

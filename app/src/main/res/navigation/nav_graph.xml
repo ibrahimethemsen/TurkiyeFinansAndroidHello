@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/onBoardingFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.onboarding.OnBoardingFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.onboarding.OnBoardingFragment"
         android:label="fragment_on_boarding"
         tools:layout="@layout/fragment_on_boarding" >
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.login.LoginFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.register.RegisterFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.register.RegisterFragment"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" >
         <action
@@ -44,7 +44,7 @@
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.forgotpassword.ForgotPasswordFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.forgotpassword.ForgotPasswordFragment"
         android:label="fragment_forgot_password"
         tools:layout="@layout/fragment_forgot_password" >
         <action
@@ -53,7 +53,22 @@
     </fragment>
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.home.HomeFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.home.HomeFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_addBookFragment"
+            app:destination="@id/addBookFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addBookFragment"
+        android:name="com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.addbook.AddBookFragment"
+        android:label="fragment_add_book"
+        tools:layout="@layout/fragment_add_book" >
+        <action
+            android:id="@+id/action_addBookFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/addBookFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
