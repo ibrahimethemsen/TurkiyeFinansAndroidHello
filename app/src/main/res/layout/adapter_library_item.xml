@@ -41,6 +41,7 @@
             android:textSize="12sp"
             android:ellipsize="end"
             android:maxLines="3"
+            android:fontFamily="@font/caveat"
             app:layout_constraintBottom_toTopOf="@+id/adapterRating"
             app:layout_constraintEnd_toStartOf="@+id/adapter_favorite"
             app:layout_constraintStart_toStartOf="@+id/adapter_book_title_tv"

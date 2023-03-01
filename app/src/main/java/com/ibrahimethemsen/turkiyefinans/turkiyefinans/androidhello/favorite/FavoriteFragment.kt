@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentFavoriteBinding
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.adapter.LibraryAdapter
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.adapter.LibraryAdapter
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.favoriteList
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.Constants
 

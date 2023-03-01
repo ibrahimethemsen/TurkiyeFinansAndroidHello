@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.RadioButton
-import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -16,6 +15,7 @@ import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentRegisterBinding
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.model.UserSettings
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.dataStore
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.userInfoMessage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.coroutines.CoroutineContext
@@ -42,7 +42,7 @@ class RegisterFragment : Fragment() {
                 if (checkEditText()){
                    writeDataStore()
                 }else{
-                    Toast.makeText(requireContext(),"Boş alan bırakmayınız",Toast.LENGTH_LONG).show()
+                    requireContext().userInfoMessage(R.string.empty_text_field)
                 }
             }
         }
@@ -51,7 +51,6 @@ class RegisterFragment : Fragment() {
     }
     private fun writeDataStore(coroutineContext : CoroutineContext = Dispatchers.IO){
         val deviceId = Settings.Secure.getString(requireContext().contentResolver,Settings.Secure.ANDROID_ID)
-        //TODO Repository-Clean Arch ile update işlemi taşınabilir
         lifecycleScope.launch(coroutineContext){
             requireContext().dataStore.updateData {
                 UserSettings(

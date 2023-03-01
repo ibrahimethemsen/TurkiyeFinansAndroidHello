@@ -1,8 +1,8 @@
 package com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.register
 
-import androidx.lifecycle.ViewModel
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.base.BaseViewModel
 
-class RegisterViewModel() : ViewModel() {
+class RegisterViewModel : BaseViewModel() {
     fun isCheckRegister(
         email: String?,
         password: String?,
@@ -15,8 +15,6 @@ class RegisterViewModel() : ViewModel() {
                 isCheckEditText(nickName)
     }
 
-    private fun isCheckEditText(stringValue: String?): Boolean {
-        return !stringValue.isNullOrBlank() && stringValue.isNotEmpty() && stringValue.length > 6
-    }
+
 }
 

@@ -9,15 +9,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentLoginBinding
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.model.UserSettings
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.SharedManager
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.dataStore
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.userInfoMessage
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
@@ -27,6 +28,7 @@ class LoginFragment : Fragment() {
     private var _binding : FragmentLoginBinding? = null
     private val binding get() = _binding!!
     private lateinit var sharedManager : SharedManager
+    private val viewModel by viewModels<LoginViewModel>()
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -37,13 +39,26 @@ class LoginFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        sharedManager = SharedManager(requireContext())
         clickableText(R.string.register,::toRegisterFragment,binding.loginToRegisterTv)
         clickableText(R.string.forgot_password,::toForgotPasswordFragment,binding.loginForgotPassword)
-        sharedManager = SharedManager(requireContext())
-        binding.loginBtn.setOnClickListener {
-            readDataStore()
-            loginCheck(readDataStore())
+        listener()
+        isUserRemember()
+    }
+    private fun listener(){
+        binding.apply {
+            loginBtn.setOnClickListener {
+                if (viewModel.isCheckLogin(binding.loginEpostaEt.text.toString(),binding.loginPasswordEt.text.toString())){
+                    readDataStore()
+                    loginCheck(readDataStore())
+                }else{
+                    requireContext().userInfoMessage(R.string.empty_text_field)
+                }
+            }
         }
+    }
+
+    private fun isUserRemember(){
         if (sharedManager.getSharedPreference(IS_USER_REMEMBER,false)){
             toHomeFragment()
         }
@@ -64,11 +79,9 @@ class LoginFragment : Fragment() {
             }
             toHomeFragment()
         }else{
-            Toast.makeText(requireContext(),"Eposta veya şifre yanlış",Toast.LENGTH_LONG).show()
+            requireContext().userInfoMessage(R.string.false_email_password)
         }
     }
-
-
 
     private fun toHomeFragment(){
         val action = LoginFragmentDirections.actionLoginFragmentToHomeFragment()

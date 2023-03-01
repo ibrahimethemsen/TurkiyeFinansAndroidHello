@@ -1,5 +1,9 @@
 <resources>
     <string name="app_name" translatable="false">Books Board</string>
+    <!--Common-->
+    <string name="empty_text_field">Fill in the required fields</string>
+    <string name="false_email_password">Email or password is incorrect</string>
+
     <!--Content Description-->
     <string name="cd_app_icon">App Icon</string>
     <string name="cd_gradient">Color Gradient</string>
@@ -30,6 +34,7 @@
     <!--Forgot Password-->
     <string name="forgot_password_helper">Your security password is the password you entered when registering.</string>
     <string name="reset_password_tv">Reset Password</string>
+    <string name="send_email_link">Password recovery mail has been sent</string>
 
     <string name="library">Library</string>
     <string name="favorite">Favorite</string>
@@ -66,7 +71,9 @@
     <string name="book_detail_language">%s\nLanguage</string>
     <string name="book_detail_page">%d\nPages</string>
 
-
     <!--Favorite Fragment-->
     <string name="empty_list">Visit the Library to add a favorite book.</string>
+
+    <!--Search Hint-->
+    <string name="search_hint">Book Name</string>
 </resources>

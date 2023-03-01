@@ -1,4 +1,4 @@
-package com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.adapter
+package com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

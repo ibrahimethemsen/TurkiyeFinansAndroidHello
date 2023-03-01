@@ -4,16 +4,19 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SearchView
+import android.widget.SearchView.OnCloseListener
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.chip.Chip
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentLibraryBinding
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.adapter.LibraryAdapter
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.adapter.LibraryAdapter
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.Category
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.booksList
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.library.data.favoriteList
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.Constants.START_LIBRARY
+
 
 class LibraryFragment : Fragment() {
     private var _binding: FragmentLibraryBinding? = null
@@ -33,6 +36,35 @@ class LibraryFragment : Fragment() {
         setAdapter()
         listener()
         setRecyclerList()
+
+        binding.librarySearch.setOnQueryTextListener(object : SearchView.OnQueryTextListener,OnCloseListener{
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                queryNameList(newText)
+                return true
+            }
+
+            override fun onClose(): Boolean {
+                setRecyclerList()
+                return true
+            }
+
+        })
+    }
+
+    private fun queryNameList(query : String?){
+        if (query.isNullOrEmpty()){
+            setRecyclerList()
+        }else{
+            booksList.filter {
+                it.name.lowercase() == query.lowercase()
+            }.also {
+                libraryAdapter.updateList(it)
+            }
+        }
     }
 
     private fun listener() {

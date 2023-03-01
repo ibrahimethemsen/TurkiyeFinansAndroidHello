@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="empty_text_field">Gerekli Alanları Doldurunuz</string>
+    <string name="false_email_password">Eposta veya Şifre yanlış</string>
+
     <!--Content Description-->
     <string name="cd_app_icon">Uygulama İkonu</string>
     <string name="cd_gradient">Renk Gradyanı</string>
@@ -28,6 +31,7 @@
     <!--Forgot Password-->
     <string name="forgot_password_helper">Güvenlik şifreniz kayıt olurken girdiğiniz şifredir</string>
     <string name="reset_password_tv">Şifreyi Sıfırla</string>
+    <string name="send_email_link">Şifre sıfırlama mail\'i gönderildi</string>
 
     <string name="library">Kütüphane</string>
     <string name="favorite">Favori</string>
@@ -67,5 +71,6 @@
 
     <!--Favorite Fragment-->
     <string name="empty_list">Favori kitap eklemek için Kütüphane\'yi ziyater edin.</string>
+    <string name="search_hint">Kitap Adı</string>
 
 </resources>
