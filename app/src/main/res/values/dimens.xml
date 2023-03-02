@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Common-->
+    <dimen name="ic_book_mark">24dp</dimen>
+
     <!--Padding-->
     <dimen name="padding_24">24dp</dimen>
     <dimen name="padding_20">20dp</dimen>
@@ -20,5 +23,26 @@
     <dimen name="title_size">20sp</dimen>
     <dimen name="min_icon_size">48dp</dimen>
 
+    <!--Adapter-->
+    <dimen name="adapter_title">16sp</dimen>
+    <dimen name="adapter_sub_title">14sp</dimen>
+    <dimen name="adapter_pages">12sp</dimen>
 
+    <dimen name="tag_filter_chip">12sp</dimen>
+
+    <!--Add Book-->
+    <dimen name="add_book_cover_w">100dp</dimen>
+    <dimen name="add_book_cover_h">100dp</dimen>
+    <dimen name="add_book_cover_max_w">150dp</dimen>
+    <dimen name="add_book_cover_max_h">150dp</dimen>
+    <dimen name="add_book_hint">16sp</dimen>
+    <dimen name="add_book_image_tv">16sp</dimen>
+    <dimen name="add_book_btn">16sp</dimen>
+
+    <!--Book Detail-->
+    <dimen name="book_detail_title">24sp</dimen>
+    <dimen name="book_detail_sub_title">20sp</dimen>
+    <dimen name="book_detail_info">16sp</dimen>
+    <dimen name="book_detail_description_title">20sp</dimen>
+    <dimen name="book_detail_description">16sp</dimen>
 </resources>

@@ -23,6 +23,7 @@
             android:id="@+id/add_book_name_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/add_book_hint"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -40,6 +41,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/add_book_subtitle_et"
+            android:textSize="@dimen/add_book_hint"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="text" />
@@ -62,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:digits="12345"
+            android:textSize="@dimen/add_book_hint"
             android:inputType="numberDecimal"
             android:maxLength="1" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -72,6 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:hint="@string/add_book_pages"
+        android:textSize="@dimen/add_book_hint"
         android:maxWidth="@dimen/max_width_et"
         android:minWidth="@dimen/min_width_et"
         app:layout_constraintEnd_toEndOf="parent"
@@ -81,44 +85,19 @@
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/add_book_pages_et"
             android:layout_width="match_parent"
+            android:textSize="@dimen/add_book_hint"
             android:layout_height="wrap_content"
             android:inputType="numberDecimal" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.chip.ChipGroup
+    <com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.component.FilterTagChipComponent
         android:id="@+id/add_book_category_group"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="@+id/add_book_pages_til"
         app:layout_constraintStart_toStartOf="@+id/add_book_pages_til"
         app:layout_constraintTop_toBottomOf="@+id/add_book_pages_til"
-        app:singleSelection="true">
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/add_book_category_history"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding_4"
-            android:text="@string/category_history" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/add_book_category_sociology"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding_4"
-            android:text="@string/category_sociology" />
-
-        <com.google.android.material.chip.Chip
-            android:id="@+id/add_book_category_self"
-            style="@style/Widget.MaterialComponents.Chip.Filter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/padding_4"
-            android:text="@string/category_self_improvement" />
-    </com.google.android.material.chip.ChipGroup>
-
+    />
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/add_book_language_til"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -135,10 +114,10 @@
             android:id="@+id/add_book_language_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/add_book_hint"
             android:inputType="text" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <!--TODO support dimens -->
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/add_book_description_til"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
@@ -155,7 +134,8 @@
             android:id="@+id/add_book_description_et"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="left|top"
+            android:gravity="start"
+            android:textSize="@dimen/add_book_hint"
             android:inputType="textMultiLine"
             android:scrollbars="vertical" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -165,6 +145,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/padding_16"
+        android:textSize="@dimen/add_book_image_tv"
         android:text="@string/add_book_cover"
         android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="@+id/add_book_description_til"
@@ -186,10 +167,10 @@
 
     <ImageView
         android:id="@+id/add_book_cover_preview"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:maxWidth="150dp"
-        android:maxHeight="150dp"
+        android:layout_width="@dimen/add_book_cover_w"
+        android:layout_height="@dimen/add_book_cover_h"
+        android:maxWidth="@dimen/add_book_cover_max_w"
+        android:maxHeight="@dimen/add_book_cover_max_h"
         android:contentDescription="@string/cd_book_cover_preview"
         app:layout_constraintBottom_toTopOf="@+id/add_book_btn"
         app:layout_constraintEnd_toEndOf="parent"
@@ -200,14 +181,16 @@
 
     <Button
         android:id="@+id/add_book_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="@string/add_book_btn"
         android:textAllCaps="false"
+        android:layout_marginHorizontal="@dimen/padding_24"
+        android:textSize="@dimen/add_book_btn"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/add_book_description_til"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/add_book_description_til"
         app:layout_constraintTop_toBottomOf="@+id/add_book_cover_preview" />
 
 

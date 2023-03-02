@@ -4,7 +4,7 @@ import android.graphics.Bitmap
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.data.Category
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.component.Category
 
 @Entity("book_entity")
 data class BookEntity(

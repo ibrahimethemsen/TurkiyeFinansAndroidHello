@@ -17,10 +17,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.chip.Chip
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentAddBookBinding
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.data.Category
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.component.Category
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.userInfoMessage
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -63,28 +62,16 @@ class AddBookFragment : Fragment() {
                     Toast.makeText(requireContext(), "Bitmap null", Toast.LENGTH_SHORT).show()
                 }
             }
-            addBookCategoryGroup.setOnCheckedStateChangeListener { group, checkedIds ->
-                if (checkedIds.isNotEmpty()) {
-                    val selectedChip = group.findViewById<Chip>(checkedIds.first())
-                    when (selectedChip.text) {
-                        getString(R.string.category_history) -> {
-                            category = Category.HISTORY
-                        }
-                        getString(R.string.category_sociology) -> {
-                            category = Category.SOCIOLOGY
-                        }
-                        getString(R.string.category_self_improvement) -> {
-                            category = Category.SELF_IMPROVEMENT
-                        }
-                    }
-                } else {
-                    category = null
-                }
+            addBookCategoryGroup.setFilterTagChip(::setCategory,::setCategory,::setCategory){
+                category = null
             }
             addBookImageBtn.setOnClickListener {
                 pickPhoto()
             }
         }
+    }
+    private fun setCategory(category : Category){
+        this.category = category
     }
 
     private val galleryPermission = registerForActivityResult(

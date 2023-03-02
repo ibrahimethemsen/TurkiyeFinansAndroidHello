@@ -2,12 +2,8 @@ package com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentatio
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.component.Category
 
-enum class Category{
-    HISTORY,
-    SELF_IMPROVEMENT,
-    SOCIOLOGY
-}
 
 data class Book(
     val id : Int,

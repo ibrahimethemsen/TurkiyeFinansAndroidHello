@@ -9,11 +9,9 @@ import android.widget.SearchView.OnCloseListener
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.chip.Chip
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.R
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.adapter.LibraryAdapter
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.databinding.FragmentLibraryBinding
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.data.Category
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.component.Category
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.data.booksList
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.data.favoriteList
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.utility.Constants.START_LIBRARY
@@ -73,23 +71,8 @@ class LibraryFragment : Fragment() {
 
     private fun listener() {
         libraryAdapter.setClickBook(::clickBook)
-        binding.libraryCategoryGroup.setOnCheckedStateChangeListener { group, checkedIds ->
-            if (checkedIds.isNotEmpty()){
-                val selectedChip = group.findViewById<Chip>(checkedIds.first())
-                when (selectedChip.text) {
-                    getString(R.string.category_history) -> {
-                        filterChip(Category.HISTORY)
-                    }
-                    getString(R.string.category_sociology) -> {
-                        filterChip(Category.SOCIOLOGY)
-                    }
-                    getString(R.string.category_self_improvement) -> {
-                        filterChip(Category.SELF_IMPROVEMENT)
-                    }
-                }
-            }else{
-                setRecyclerList()
-            }
+        binding.libraryCategoryGroup.setFilterTagChip(::filterChip,::filterChip,::filterChip){
+            setRecyclerList()
         }
     }
 

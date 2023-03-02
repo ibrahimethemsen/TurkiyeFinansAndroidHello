@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/filter_tag_chip_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/padding_4"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_tag_chip_history"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tag_filter_chip"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_history" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_tag_chip_sociology"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/tag_filter_chip"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_sociology" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/filter_tag_chip_category_self"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:textSize="@dimen/tag_filter_chip"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_self_improvement" />
+    </com.google.android.material.chip.ChipGroup>
+</FrameLayout>

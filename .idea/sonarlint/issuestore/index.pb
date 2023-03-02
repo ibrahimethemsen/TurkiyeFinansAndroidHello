@@ -11,8 +11,6 @@ capp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/
 build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
 @
 app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
- 
-papp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/presentation/library/data/Book.kt,9\0\90e2e80a24842df56f5bfce1636eea2ac94e70af
 ¡
 qapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/data/database/BookBoardDatabase.kt,d\c\dcfd83b3e481bab0313ac4df54491f96674bb49c
 œ
@@ -27,8 +25,6 @@ rapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/
 sapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/presentation/login/LoginViewModel.kt,f\2\f258ca45ffaa2a69c038de9f44cd07e42a04545f
 ›
 kapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/presentation/MainActivity.kt,a\c\ac921543695d591f4c45e994f7ab29ac26166d6b
-¤
-tapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/presentation/library/data/MockData.kt,c\c\ccf210edab773f1e294a6c4e417db272019d674d
 ¬
 |app/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/presentation/onboarding/OnBoardingFragment.kt,1\0\1020a78923d88035e5cc2e9181596452c43ece9e
 ”
@@ -49,5 +45,3 @@ xapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/
 happ/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/adapter/LibraryAdapter.kt,5\4\5440bf6547aed93c0cc13866021371d82014e45e
 ¨
 xapp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/presentation/register/RegisterFragment.kt,6\b\6bc878ea926f6ce0db179c4dd48f89da819ce9e6
-ž
-napp/src/main/java/com/ibrahimethemsen/turkiyefinans/turkiyefinans/androidhello/domain/model/room/BookEntity.kt,4\3\439746d2f07db816e45977d3ce25b9a29fe33f08

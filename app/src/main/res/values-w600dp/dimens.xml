@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Common-->
+    <dimen name="ic_book_mark">32dp</dimen>
+
+    <!--Padding-->
+    <dimen name="padding_24">28dp</dimen>
+    <dimen name="padding_20">24dp</dimen>
+    <dimen name="padding_16">20dp</dimen>
+    <dimen name="padding_8">12dp</dimen>
+    <dimen name="padding_4">8dp</dimen>
+
+    <!--OnBoarding-->
+    <dimen name="onboarding_title_size">32sp</dimen>
+    <dimen name="onboarding_description_size">24sp</dimen>
+    <dimen name="onboarding_btn_text_size">20sp</dimen>
+
+    <!--EditText-->
+    <dimen name="min_width_et">380dp</dimen>
+    <dimen name="max_width_et">488dp</dimen>
+
+    <!--Login-->
+    <dimen name="title_size">24sp</dimen>
+    <dimen name="min_icon_size">48dp</dimen>
+
+    <!--Adapter-->
+    <dimen name="adapter_title">20sp</dimen>
+    <dimen name="adapter_sub_title">18sp</dimen>
+    <dimen name="adapter_pages">16sp</dimen>
+
+    <dimen name="tag_filter_chip">16sp</dimen>
+
+    <!--Add Book-->
+    <dimen name="add_book_cover_w">200dp</dimen>
+    <dimen name="add_book_cover_h">200dp</dimen>
+    <dimen name="add_book_cover_max_w">250dp</dimen>
+    <dimen name="add_book_cover_max_h">250dp</dimen>
+    <dimen name="add_book_hint">20sp</dimen>
+    <dimen name="add_book_image_tv">20sp</dimen>
+    <dimen name="add_book_btn">20sp</dimen>
+
+    <!--Book Detail-->
+    <!--Book Detail-->
+    <dimen name="book_detail_title">28sp</dimen>
+    <dimen name="book_detail_sub_title">24sp</dimen>
+    <dimen name="book_detail_info">20sp</dimen>
+    <dimen name="book_detail_description_title">24sp</dimen>
+    <dimen name="book_detail_description">20sp</dimen>
+
+</resources>

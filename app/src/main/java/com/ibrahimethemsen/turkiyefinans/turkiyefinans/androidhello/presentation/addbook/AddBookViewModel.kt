@@ -5,7 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.data.database.BookDao
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.domain.model.room.BookEntity
 import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.base.BaseViewModel
-import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.library.data.Category
+import com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentation.component.Category
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
