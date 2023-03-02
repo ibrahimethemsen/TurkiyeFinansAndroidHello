@@ -7,14 +7,208 @@
     android:layout_height="match_parent"
     tools:context=".presentation.addbook.AddBookFragment">
 
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_book_name_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_book_name"
+        android:maxWidth="@dimen/max_width_et"
+        android:minWidth="@dimen/min_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_book_name_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_book_subtitle_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_sub_title"
+        android:maxWidth="@dimen/max_width_et"
+        android:minWidth="@dimen/min_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_name_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_book_subtitle_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_book_rating_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_book_rating"
+        android:maxWidth="@dimen/max_width_et"
+        android:minWidth="@dimen/min_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_subtitle_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_book_rating_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:digits="12345"
+            android:inputType="numberDecimal"
+            android:maxLength="1" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_book_pages_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_book_pages"
+        android:maxWidth="@dimen/max_width_et"
+        android:minWidth="@dimen/min_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_rating_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_book_pages_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/add_book_category_group"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@+id/add_book_pages_til"
+        app:layout_constraintStart_toStartOf="@+id/add_book_pages_til"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_pages_til"
+        app:singleSelection="true">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/add_book_category_history"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_history" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/add_book_category_sociology"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_sociology" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/add_book_category_self"
+            style="@style/Widget.MaterialComponents.Chip.Filter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_4"
+            android:text="@string/category_self_improvement" />
+    </com.google.android.material.chip.ChipGroup>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_book_language_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_book_language"
+        android:maxWidth="@dimen/max_width_et"
+        android:minWidth="@dimen/min_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_category_group">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_book_language_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--TODO support dimens -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/add_book_description_til"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="@string/add_book_description"
+        android:maxWidth="@dimen/min_width_et"
+        android:minWidth="@dimen/min_width_et"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_language_til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/add_book_description_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="left|top"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/add_book_image_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/padding_16"
+        android:text="@string/add_book_cover"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="@+id/add_book_description_til"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_description_til" />
+
+    <ImageButton
+        android:id="@+id/add_book_image_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/cd_add_button_image"
+        android:minWidth="@dimen/min_icon_size"
+        android:minHeight="@dimen/min_icon_size"
+        android:src="@drawable/ic_image"
+        app:layout_constraintBottom_toBottomOf="@+id/add_book_image_tv"
+        app:layout_constraintStart_toEndOf="@+id/add_book_image_tv"
+        app:layout_constraintTop_toTopOf="@+id/add_book_image_tv" />
+
+
+    <ImageView
+        android:id="@+id/add_book_cover_preview"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:maxWidth="150dp"
+        android:maxHeight="150dp"
+        android:contentDescription="@string/cd_book_cover_preview"
+        app:layout_constraintBottom_toTopOf="@+id/add_book_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_image_btn"
+        tools:src="@drawable/book" />
+
     <Button
         android:id="@+id/add_book_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/add_book_btn"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="100dp"
-        android:text="SAVE"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_book_cover_preview" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

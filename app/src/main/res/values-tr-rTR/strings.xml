@@ -10,6 +10,9 @@
     <string name="cd_book_cover">Kitap Kapağı</string>
     <string name="cd_back_btn">Geri Butonu</string>
     <string name="cd_book_title_detail_background">Başlıkların Arkaplanı</string>
+    <string name="cd_add_button_image">Kitap resmi ekleme</string>
+    <string name="cd_book_cover_preview">Kitap kapağı önizlemesi</string>
+
 
     <!--OnBoarding-->
     <string name="onboarding_description">Kitaplarınızın konularını kayıt altına alabileceğiniz\ntürlerine göre filtreleme yapabileceğiniz küçük bir kütaphanedir.</string>
@@ -73,5 +76,18 @@
     <string name="empty_list">Favori kitap eklemek için Kütüphane\'yi ziyater edin.</string>
     <string name="search_hint">Kitap Adı</string>
     <string name="cd_add_book_btn">Kitap Ekleme Butonu</string>
+
+    <!--Add book-->
+    <string name="add_book_btn">Ekle</string>
+    <string name="add_book_name">Kitap Adı</string>
+    <string name="add_sub_title">Alt Yazı</string>
+    <string name="add_book_rating">Değerlendirme</string>
+    <string name="add_book_pages">Sayfa sayısı</string>
+    <string name="add_book_language">Yazım dili</string>
+    <string name="add_book_cover">Kitabın resmi</string>
+    <string name="add_book_description">Kitap açıklaması</string>
+    <string name="add_book_category">Bir kategori seçin</string>
+    <string name="add_book_no_gallery_permission">Galeri izni yok</string>
+
 
 </resources>

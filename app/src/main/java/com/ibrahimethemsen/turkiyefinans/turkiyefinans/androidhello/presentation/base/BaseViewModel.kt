@@ -3,7 +3,7 @@ package com.ibrahimethemsen.turkiyefinans.turkiyefinans.androidhello.presentatio
 import androidx.lifecycle.ViewModel
 
 open class BaseViewModel : ViewModel() {
-    protected fun isCheckEditText(stringValue: String?): Boolean {
-        return !stringValue.isNullOrBlank() && stringValue.isNotEmpty() && stringValue.length > 6
+    protected fun isCheckEditText(stringValue: String?,stringLength : Int = 6): Boolean {
+        return !stringValue.isNullOrBlank() && stringValue.isNotEmpty() && stringValue.length > stringLength
     }
 }
