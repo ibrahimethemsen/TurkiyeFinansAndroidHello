@@ -24,3 +24,8 @@ jobs:
       run: chmod +x gradlew
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Run Kotlin Linter
+      run: ./gradlew ktlintStagingDebugCheck
+
+    - name: Run Unit Tests
+      run: ./gradlew testStagingDebugUnitTest
